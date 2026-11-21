@@ -1,0 +1,159 @@
+{
+  "source_clean_dataset": "data\\cleaned\\cleaned_data.csv",
+  "target_col": "Price_USD",
+  "task_type": "regression",
+  "total_rows_used": 5000,
+  "train_rows": 4000,
+  "test_rows": 1000,
+  "cv_folds": 5,
+  "best_model": "3_hist_gradient_boosting",
+  "saved_model_path": "models\\best_ml_pipeline.joblib",
+  "model_comparison": [
+    {
+      "model": "1_baseline_dummy_mean",
+      "val_mae": 14548.6082,
+      "val_rmse": 18403.1317,
+      "val_r2": -0.0023,
+      "test_mae": 14126.9002,
+      "test_rmse": 18021.5618,
+      "test_r2": -0.0
+    },
+    {
+      "model": "2_linear_ridge",
+      "val_mae": 10786.7587,
+      "val_rmse": 14046.6026,
+      "val_r2": 0.4146,
+      "test_mae": 10583.5089,
+      "test_rmse": 13678.1174,
+      "test_r2": 0.4239
+    },
+    {
+      "model": "3_hist_gradient_boosting",
+      "val_mae": 7544.581,
+      "val_rmse": 11154.6688,
+      "val_r2": 0.6307,
+      "test_mae": 7432.3767,
+      "test_rmse": 10924.9753,
+      "test_r2": 0.6325
+    }
+  ],
+  "top_errors": [
+    {
+      "row_index": 2181,
+      "actual": 81172.39,
+      "predicted": 31580.91309702419,
+      "abs_error": 49591.47690297581
+    },
+    {
+      "row_index": 911,
+      "actual": 83523.42,
+      "predicted": 40198.92535146116,
+      "abs_error": 43324.494648538835
+    },
+    {
+      "row_index": 4463,
+      "actual": 84850.98,
+      "predicted": 44259.562162415335,
+      "abs_error": 40591.41783758466
+    },
+    {
+      "row_index": 4800,
+      "actual": 72372.72,
+      "predicted": 33093.01462549134,
+      "abs_error": 39279.70537450866
+    },
+    {
+      "row_index": 1370,
+      "actual": 76426.91,
+      "predicted": 38592.29444849163,
+      "abs_error": 37834.615551508374
+    }
+  ],
+  "sample_unseen_predictions": [
+    {
+      "Transaction_ID": "Txn-102283",
+      "Sale_Date": "2023-05-02",
+      "Make": "Chevrolet",
+      "Model": "Colorado",
+      "Vehicle_Type": "Sedan",
+      "Fuel_Type": "Diesel",
+      "Year": 2017,
+      "Units_Sold": 1.0,
+      "Total_Sales_USD": 43171.57,
+      "Region": "North America",
+      "Sales_Rep": "Sarah Connor",
+      "log1p_Total_Sales_USD": 10.672960618860024,
+      "ratio_Total_Sales_USD_to_Units_Sold": 43171.57,
+      "predicted": 44372.45823877409,
+      "actual": 43171.57
+    },
+    {
+      "Transaction_ID": "Txn-100522",
+      "Sale_Date": "2026-07-17",
+      "Make": "Toyota",
+      "Model": "Tacoma",
+      "Vehicle_Type": "Truck",
+      "Fuel_Type": "Diesel",
+      "Year": 2017,
+      "Units_Sold": 7.0,
+      "Total_Sales_USD": 272475.21,
+      "Region": "Europe",
+      "Sales_Rep": "Sarah Connor",
+      "log1p_Total_Sales_USD": 12.515306586522035,
+      "ratio_Total_Sales_USD_to_Units_Sold": 38925.030000000006,
+      "predicted": 40347.663579932036,
+      "actual": 38925.03
+    },
+    {
+      "Transaction_ID": "Txn-104710",
+      "Sale_Date": "2021-03-14",
+      "Make": "B.M.W.",
+      "Model": "3 Series",
+      "Vehicle_Type": "Sedan",
+      "Fuel_Type": "Gasoline",
+      "Year": 2020,
+      "Units_Sold": 7.0,
+      "Total_Sales_USD": 331435.65,
+      "Region": "Europe",
+      "Sales_Rep": "Pam Beesly",
+      "log1p_Total_Sales_USD": 12.711191969290114,
+      "ratio_Total_Sales_USD_to_Units_Sold": 47347.95,
+      "predicted": 51924.00023597887,
+      "actual": 39856.06
+    },
+    {
+      "Transaction_ID": "Txn-100215",
+      "Sale_Date": "2025-07-27",
+      "Make": "Honda",
+      "Model": "Cr-V",
+      "Vehicle_Type": "Sedan",
+      "Fuel_Type": "Gasoline",
+      "Year": 2019,
+      "Units_Sold": 12.0,
+      "Total_Sales_USD": 568923.24,
+      "Region": "Middle East & Africa",
+      "Sales_Rep": "Unknown",
+      "log1p_Total_Sales_USD": 13.251502558373822,
+      "ratio_Total_Sales_USD_to_Units_Sold": 47410.27,
+      "predicted": 50010.82250394432,
+      "actual": 47410.27
+    },
+    {
+      "Transaction_ID": "Txn-101877",
+      "Sale_Date": "2026-11-24",
+      "Make": "Ford",
+      "Model": "F-150",
+      "Vehicle_Type": "Coupe",
+      "Fuel_Type": "Hybrid",
+      "Year": 2024,
+      "Units_Sold": 4.0,
+      "Total_Sales_USD": 228684.16,
+      "Region": "North America",
+      "Sales_Rep": "Michael Scott",
+      "log1p_Total_Sales_USD": 12.340101489405304,
+      "ratio_Total_Sales_USD_to_Units_Sold": 57171.04,
+      "predicted": 56197.41224584887,
+      "actual": 57171.04
+    }
+  ]
+}
